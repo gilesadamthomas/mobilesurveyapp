@@ -7,8 +7,31 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+    
+    <div class="container">
+	
+	<nav class="top-bar">
+	    <ul>
+	        <li class="name"><h1><a href="/">MobileSurveyApp</a></h1></li>
+	        
+	    </ul>
+	  <section>
+	    <ul class="left">
+	      <li><%= link_to "My Surveys", surveys_path %></li>
+	    </ul>
+	  </section>
+	</nav>
+	
+	<div class="row">
+        <%= yield %>
+    </div>
 
-<%= yield %>
+    <div class="row">
+	    <p class="notice"><%= notice %></p>
+    	<p class="alert"><%= alert %></p>
+    </div>
+
+	</div>
 
 </body>
 </html>
